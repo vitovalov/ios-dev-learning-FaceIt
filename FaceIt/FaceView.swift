@@ -24,7 +24,7 @@ class FaceView: UIView {
     var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() } }
     
     @IBInspectable
-    var mouthCurvature: Double = -5.0 { didSet { setNeedsDisplay() } } // 1.0 is full smile and -1.0 is full frown
+    var mouthCurvature: Double = 0.5 { didSet { setNeedsDisplay() } } // 1.0 is full smile and -1.0 is full frown
     
     func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer)
     {
