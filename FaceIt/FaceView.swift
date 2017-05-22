@@ -12,19 +12,31 @@ import UIKit
 class FaceView: UIView {
 
     @IBInspectable // to be inspectable, we need to always specify the type
-    var scale: CGFloat = 0.9
+    var scale: CGFloat = 0.9 { didSet { setNeedsDisplay() } }
     
     @IBInspectable
-    var eyesOpen: Bool = true
+    var eyesOpen: Bool = true { didSet { setNeedsDisplay() } }
     
     @IBInspectable
-    var lineWidth: CGFloat = 5.0
+    var lineWidth: CGFloat = 5.0 { didSet { setNeedsDisplay() } }
     
     @IBInspectable
-    var color: UIColor = UIColor.blue
+    var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() } }
     
     @IBInspectable
-    var mouthCurvature: Double = -5.0 // 1.0 is full smile and -1.0 is full frown
+    var mouthCurvature: Double = -5.0 { didSet { setNeedsDisplay() } } // 1.0 is full smile and -1.0 is full frown
+    
+    func changeScale(byReactingTo pinchRecognizer: UIPinchGestureRecognizer)
+    {
+        switch pinchRecognizer.state {
+        case .changed, .ended:
+            scale *= pinchRecognizer.scale
+            print("scale= \(scale)")
+            pinchRecognizer.scale = 1
+        default:
+            break
+        }
+    }
     
     // by making it calculated property, we can recompute it every time bounds change
     private var skullRadius: CGFloat {
