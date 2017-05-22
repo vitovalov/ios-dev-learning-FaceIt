@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// The MODEL
 struct FacialExpression
 {
     enum Eyes: Int {
