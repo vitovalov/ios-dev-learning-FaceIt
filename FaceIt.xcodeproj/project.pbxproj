@@ -17,6 +17,7 @@
 		5FA4B17C1ED226E90092FB8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA4B17A1ED226E90092FB8F /* LaunchScreen.storyboard */; };
 		5FA4B1851ED23B680092FB8F /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1841ED23B680092FB8F /* FaceView.swift */; };
 		5FD7E8011EDBFC640069AA61 /* BlinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD7E8001EDBFC640069AA61 /* BlinkingViewController.swift */; };
+		5FD7E8031EDC0ADE0069AA61 /* EyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD7E8021EDC0ADE0069AA61 /* EyeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5FA4B17D1ED226E90092FB8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA4B1841ED23B680092FB8F /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		5FD7E8001EDBFC640069AA61 /* BlinkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingViewController.swift; sourceTree = "<group>"; };
+		5FD7E8021EDC0ADE0069AA61 /* EyeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				5FA4B1751ED226E90092FB8F /* Main.storyboard */,
 				5F66C1E31ED347D600C28EB8 /* EmotionsViewController.swift */,
 				5FD7E8001EDBFC640069AA61 /* BlinkingViewController.swift */,
+				5FD7E8021EDC0ADE0069AA61 /* EyeView.swift */,
 			);
 			path = FaceIt;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				5F66C1E41ED347D600C28EB8 /* EmotionsViewController.swift in Sources */,
 				5FD7E8011EDBFC640069AA61 /* BlinkingViewController.swift in Sources */,
 				5FA4B1721ED226E90092FB8F /* AppDelegate.swift in Sources */,
+				5FD7E8031EDC0ADE0069AA61 /* EyeView.swift in Sources */,
 				5FA4B1851ED23B680092FB8F /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
