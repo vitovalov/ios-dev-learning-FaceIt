@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmotionsViewController: UIViewController {
+class EmotionsViewController: VCLLoggingViewController {
     
     // MARK: - Navigation
     
@@ -24,6 +24,7 @@ class EmotionsViewController: UIViewController {
             let identifier = segue.identifier,
             let expression = emotionalFaces[identifier] {
             faceViewController.expression = expression
+            // button is the button that started the navigation 
             faceViewController.navigationItem.title = (sender as? UIButton)?.currentTitle
         }
     }
