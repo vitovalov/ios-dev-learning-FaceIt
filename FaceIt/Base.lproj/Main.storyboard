@@ -235,6 +235,11 @@
                                 <action selector="cancel:" destination="stW-3F-uEq" id="2VQ-Sv-527"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="GNh-E3-iwO">
+                            <connections>
+                                <segue destination="MKd-Tk-f11" kind="unwind" identifier="Add Emotion" unwindAction="addEmotionalFaceFrom:" id="DYR-mG-ab8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="eyeControl" destination="0LU-ZM-e4X" id="zkh-Aa-Oki"/>
@@ -243,6 +248,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAN-nA-cgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MKd-Tk-f11" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2684.057971014493" y="122.28260869565219"/>
         </scene>
