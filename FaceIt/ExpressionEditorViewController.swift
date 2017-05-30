@@ -27,6 +27,7 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
     
     @IBAction func updateFace(_ sender: Any) {
         print("\(name) = \(expression)")
+        faceViewController?.expression = expression
     }
     
     
@@ -36,7 +37,14 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
     
     @IBOutlet weak var mouthControl: UISegmentedControl!
     
+    private var faceViewController: BlinkingViewController?
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Embed Face" {
+            faceViewController = segue.destination as? BlinkingViewController
+            faceViewController?.expression = expression
+        }
+    }
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
