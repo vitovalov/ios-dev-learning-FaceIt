@@ -100,7 +100,9 @@
                     <navigationItem key="navigationItem" title="Emotions" id="6hp-FE-HRI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1DM-5B-AJT">
                             <connections>
-                                <segue destination="ec8-T4-kFE" kind="presentation" id="Dej-Ly-6Ry"/>
+                                <segue destination="ec8-T4-kFE" kind="popoverPresentation" popoverAnchorBarButtonItem="1DM-5B-AJT" id="Dej-Ly-6Ry">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
