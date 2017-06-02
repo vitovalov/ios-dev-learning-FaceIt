@@ -60,7 +60,7 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             self.nameTextField?.text = alert.textFields?.first?.text
-            self.shouldPerformSegue(withIdentifier: "Add Emotion", sender: nil)
+            self.performSegue(withIdentifier: "Add Emotion", sender: nil)
         }))
         alert.addTextField(configurationHandler: nil)
         present(alert, animated: true)
