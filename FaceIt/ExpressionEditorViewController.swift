@@ -57,8 +57,12 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
     
     private func handleUnnamedFace() {
         let alert = UIAlertController(title: "Invalid Face", message: "A face must have a name.", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.nameTextField?.text = alert.textFields?.first?.text
+        }))
+        alert.addTextField(configurationHandler: nil)
         present(alert, animated: true)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     }
     
     override func viewWillAppear(_ animated: Bool) {
